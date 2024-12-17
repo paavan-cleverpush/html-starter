@@ -1,9 +1,9 @@
-name: Deploy HTML Project
+name: CleverPush Prod
 
 on:
   push:
     branches:
-      - main  # Adjust if your default branch is not 'main'
+      - main
 
 jobs:
   build:
