@@ -1,0 +1,11 @@
+test,eventId,date,revenue,channel
+test,rDBEtG5uNizq2q8h6,2025-04-16 10:27:29.410+0000,200,mej3qrfkS5mNXysgr
+test,pLYHTgS2J6xJrtAnn,2023-10-19 06:08:48.952+0000,250,mej3qrfkS5mNXysgr
+test,rDBEtG5uNizq2q8h6,2025-04-16 10:27:29.353+0000,200,mej3qrfkS5mNXysgr
+test,aL9GfRt6YhNmJp3Vx,2024-01-15 14:22:36.127+0000,150,mej3qrfkS5mNXysgr
+test,sD8FgH6JkLmN4BvX7,2024-02-28 09:15:42.865+0000,450,mej3qrfkS5mNXysgr
+test,pD9FgH6JkLmN4BvX7,2024-03-10 18:30:55.212+0000,75,mej3qrfkS5mNXysgr
+test,qF7GhJ5KlM3NbV8Xz,2024-03-20 12:15:30.000+0000,120,mej3qrfkS5mNXysgr
+test,missing_id,2024-04-22 11:45:18.753+0000,220,mej3qrfkS5mNXysgr
+test,oP3JkL6MnB8VcX4Za,2024-05-05 16:12:33.967+0000,180,mej3qrfkS5mNXysgr
+test,kL5MnB7VcX3ZaQ9Er,2024-06-18 07:55:29.431+0000,110,mej3qrfkS5mNXysgr
