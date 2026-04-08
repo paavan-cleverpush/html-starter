@@ -51,19 +51,25 @@
     );
   }
 
-  function imgUrl(seed) {
+  function productImageUrl(p) {
+    if (p.image) return p.image;
+    var seed = p.seed || p.id || 'x';
     return 'https://picsum.photos/seed/' + seed + '/400/400';
   }
 
   function productCard(p) {
     var href = 'product.html?id=' + encodeURIComponent(p.id);
+    var img = productImageUrl(p);
+    var alt = escapeHtml(p.title);
     return (
       '<article class="p-card">' +
       '<a href="' +
       href +
       '" class="p-card-img-wrap"><img src="' +
-      imgUrl(p.seed) +
-      '" alt="" loading="lazy" width="400" height="400"/></a>' +
+      img +
+      '" alt="' +
+      alt +
+      '" loading="lazy" width="400" height="400"/></a>' +
       '<div class="p-card-body">' +
       '<a href="' +
       href +
@@ -143,13 +149,17 @@
         .slice(12, 18)
         .map(function (p) {
           var href = 'product.html?id=' + encodeURIComponent(p.id);
+          var img = productImageUrl(p);
+          var alt = escapeHtml(p.title);
           return (
             '<div class="deal-card">' +
             '<a href="' +
             href +
             '"><img src="' +
-            imgUrl(p.seed) +
-            '" alt="" loading="lazy" width="200" height="200"/></a>' +
+            img +
+            '" alt="' +
+            alt +
+            '" loading="lazy" width="200" height="200"/></a>' +
             '<a href="' +
             href +
             '" class="deal-title">' +
@@ -209,11 +219,15 @@
         return;
       }
       document.title = p.title + ' — Nordstrand';
+      var pdImg = productImageUrl(p);
+      var pdAlt = escapeHtml(p.title);
       el.innerHTML =
         '<div class="pd-grid">' +
         '<div class="pd-gallery"><img src="' +
-        imgUrl(p.seed) +
-        '" alt="" width="600" height="600"/></div>' +
+        pdImg +
+        '" alt="' +
+        pdAlt +
+        '" width="600" height="600"/></div>' +
         '<div class="pd-buy">' +
         '<p class="pd-breadcrumb"><a href="catalog.html">All</a> › ' +
         escapeHtml(p.category) +
@@ -273,10 +287,14 @@
         var lineTotal = p.price * line.qty;
         subtotal += lineTotal;
         var tr = document.createElement('tr');
+        var cImg = productImageUrl(p);
+        var cAlt = escapeHtml(p.title);
         tr.innerHTML =
           '<td><div class="cart-line"><img src="' +
-          imgUrl(p.seed) +
-          '" alt="" width="80" height="80"/><div><a href="product.html?id=' +
+          cImg +
+          '" alt="' +
+          cAlt +
+          '" width="80" height="80"/><div><a href="product.html?id=' +
           encodeURIComponent(p.id) +
           '">' +
           escapeHtml(p.title) +
