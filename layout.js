@@ -1,10 +1,10 @@
 /**
- * Nordstrand marketplace — shared chrome (Amazon / Flipkart–style header & footer).
+ * Paavan marketplace — shared chrome (Amazon / Flipkart–style header & footer).
  * Replace LEGAL_NAME and domain in footer for your production domain.
  */
 (function (global) {
-  var LEGAL_NAME = 'Nordstrand Retail GmbH';
-  var SHOP_TAGLINE = 'nordstrand.de';
+  var LEGAL_NAME = 'Paavan Retail GmbH';
+  var SHOP_TAGLINE = 'Paavan.de';
 
   var nav = [
     { href: 'index.html', id: 'home', label: 'Home' },
@@ -17,7 +17,7 @@
 
   function cartCount() {
     try {
-      var raw = localStorage.getItem('nordstrand-cart');
+      var raw = localStorage.getItem('Paavan-cart');
       var cart = raw ? JSON.parse(raw) : [];
       return cart.reduce(function (n, line) {
         return n + (line.qty || 0);
@@ -44,7 +44,7 @@
       '<a href="shipping.html">Shipping</a> · <a href="returns.html">Returns</a> · <a href="contact.html">Help</a>' +
       '</span></div></div>' +
       '<div class="main-header wrap">' +
-      '<a href="index.html" class="logo"><span class="logo-mark">N</span><span class="logo-text">ordstrand</span></a>' +
+      '<a href="index.html" class="logo"><span class="logo-mark">P</span><span class="logo-text">aavan</span></a>' +
       '<form class="search-bar" action="catalog.html" method="get" role="search">' +
       '<input type="search" name="q" placeholder="Search fashion, electronics, home…" aria-label="Search products" />' +
       '<button type="submit" class="search-btn">Search</button></form>' +

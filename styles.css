@@ -1,4 +1,4 @@
-/* Nordstrand — marketplace UI (Amazon / Flipkart inspired) */
+/* Paavan — marketplace UI (Amazon / Flipkart inspired) */
 :root {
   --bg-page: #eaeded;
   --header-dark: #131921;
@@ -23,7 +23,14 @@
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family:
+    'Segoe UI',
+    system-ui,
+    -apple-system,
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
   background: var(--bg-page);
   color: var(--text);
   line-height: 1.5;

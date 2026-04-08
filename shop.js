@@ -1,5 +1,5 @@
 (function (global) {
-  var CART_KEY = 'nordstrand-cart';
+  var CART_KEY = 'Paavan-cart';
 
   function getCart() {
     try {
@@ -218,7 +218,7 @@
         el.innerHTML = '<p>Product not found.</p>';
         return;
       }
-      document.title = p.title + ' — Nordstrand';
+      document.title = p.title + ' — Paavan';
       var pdImg = productImageUrl(p);
       var pdAlt = escapeHtml(p.title);
       el.innerHTML =
@@ -338,7 +338,7 @@
     });
   }
 
-  global.NordstrandShop = {
+  global.PaavanShop = {
     getCart: getCart,
     addToCart: addToCart,
     formatPrice: formatPrice,
