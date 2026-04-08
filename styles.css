@@ -39,6 +39,62 @@ h1 {
   color: #333;
 }
 
+/* Minimal store layout (for Merchant Center / Shopping feed landing-page checks) */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #fafafa;
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1a7f37;
+  margin: 0.5rem 0;
+}
+
+.btn-buy {
+  display: inline-block;
+  background: #2563eb;
+  color: #fff !important;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.btn-buy:hover {
+  background: #1d4ed8;
+}
+
+.product-detail .hero-img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.policy-page h2 {
+  margin-top: 1.5rem;
+}
+
 footer {
   background: #333;
   color: #fff;
