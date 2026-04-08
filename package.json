@@ -1,5 +1,8 @@
 {
   "private": true,
+  "scripts": {
+    "inject": "node scripts/inject-crawler-html.js"
+  },
   "dependencies": {
     "@vercel/edge": "^0.1.2"
   }
