@@ -4,38 +4,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact</title>
+  <title>Contact &amp; imprint — Nordstrand</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-  <header>
-    <h1 class='title'>Contact Us</h1>
-  </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="features.html">Features</a>
-  </nav>
-  <div class="container">
-    <h1>Contact Page</h1>
-    <p>We would love to hear from you. Reach out to us using the details below or send us a message through the form.
-    </p>
-    <section>
-      <h2>Our Office</h2>
-      <p>Address: 123 Main Street, Your City, Your Country</p>
-      <p>Email: contact@yourwebsite.com</p>
-      <p>Phone: +123-456-7890</p>
-    </section>
-    <section>
-      <h2>Contact Form</h2>
-      <p>Use our convenient form to send us your queries.</p>
-    </section>
-  </div>
-  <footer>
-    <p>© 2024 Your Website</p>
-  </footer>
+<body data-nav-active="home">
+  <div id="site-header"></div>
+  <main class="site-main">
+    <article class="static-page wrap">
+      <h1>Contact us</h1>
+      <p>Questions about <strong>orders, shipping, or returns</strong> — we sell physical products only.</p>
+      <section>
+        <h2>Customer service</h2>
+        <p>Email: <a href="mailto:support@nordstrand-shop.example">support@nordstrand-shop.example</a><br />
+          Phone: +49 (0) 30 0000 0000<br />
+          Hours: Mon–Fri 9:00–18:00 CET</p>
+      </section>
+      <section id="imprint">
+        <h2>Imprint (legal disclosure)</h2>
+        <p><strong>Nordstrand Retail GmbH</strong><br />
+          Musterstraße 12<br />
+          10115 Berlin<br />
+          Germany</p>
+        <p>Managing directors: Jane Doe, John Smith<br />
+          Register court: Amtsgericht Berlin HRB 000000<br />
+          VAT ID: DE000000000</p>
+        <p><em>Replace the above with your real company data when going live.</em></p>
+      </section>
+      <section>
+        <h2>EU dispute resolution</h2>
+        <p>The European Commission provides a platform for online dispute resolution: <a
+            href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ODR</a>. We are not obliged to
+          participate in consumer arbitration but will engage in good faith.</p>
+      </section>
+    </article>
+  </main>
+  <div id="site-footer"></div>
+  <script src="layout.js"></script>
+  <script>ShopLayout.inject('home');</script>
 </body>
 
 </html>

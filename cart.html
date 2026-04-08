@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping cart — Nordstrand</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-nav-active="catalog">
+  <div id="site-header"></div>
+  <main class="site-main cart-page">
+    <h1>Shopping cart</h1>
+    <div class="cart-table-wrap">
+      <table id="cart-table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Subtotal</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="cart-summary">
+      <div>Subtotal: <strong id="cart-subtotal">€0.00</strong></div>
+      <a href="checkout.html" class="btn-checkout">Proceed to checkout</a>
+      <p style="font-size:14px;color:#565959;margin-top:12px"><a href="catalog.html">Continue shopping</a></p>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="layout.js"></script>
+  <script>ShopLayout.inject('catalog');</script>
+  <script src="shop.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', NordstrandShop.initCart);</script>
+</body>
+
+</html>

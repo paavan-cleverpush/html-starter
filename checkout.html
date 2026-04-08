@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — Nordstrand</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-nav-active="catalog">
+  <div id="site-header"></div>
+  <main class="site-main checkout-grid">
+    <h1>Checkout</h1>
+    <p style="color:#565959">Demo checkout — no payment is processed. Replace with your PSP in production.</p>
+
+    <div class="checkout-card">
+      <h2>1. Shipping address</h2>
+      <label>Full name<input type="text" name="name" autocomplete="name" required /></label>
+      <label>Street &amp; number<input type="text" name="street" autocomplete="street-address" required /></label>
+      <label>Postal code<input type="text" name="zip" autocomplete="postal-code" required /></label>
+      <label>City<input type="text" name="city" autocomplete="address-level2" required /></label>
+      <label>Country
+        <select name="country">
+          <option>Germany</option>
+          <option>Austria</option>
+          <option>Netherlands</option>
+          <option>France</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="checkout-card">
+      <h2>2. Delivery</h2>
+      <label><input type="radio" name="ship" checked /> Standard (3–5 days) — FREE over €29</label><br />
+      <label><input type="radio" name="ship" /> Express (1–2 days) — €9.99</label>
+    </div>
+
+    <div class="checkout-card">
+      <h2>3. Payment</h2>
+      <label><input type="radio" name="pay" checked /> Card (Visa, Mastercard)</label><br />
+      <label><input type="radio" name="pay" /> PayPal</label><br />
+      <label><input type="radio" name="pay" /> Klarna</label>
+    </div>
+
+    <button type="button" class="btn-checkout" id="place-order" style="border:none;cursor:pointer;font-size:16px">
+      Place your order (demo)
+    </button>
+  </main>
+  <div id="site-footer"></div>
+  <script src="layout.js"></script>
+  <script>ShopLayout.inject('catalog');</script>
+  <script>
+    document.getElementById('place-order').addEventListener('click', function () {
+      alert('Demo only — no charge. Nordstrand Retail GmbH would send order confirmation email here.');
+    });
+  </script>
+</body>
+
+</html>

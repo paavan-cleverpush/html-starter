@@ -4,47 +4,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About</title>
+  <title>About us — Nordstrand</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-  <header>
-    <h1 class='title'>About Our Website</h1>
-  </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="features.html">Features</a>
-  </nav>
-  <div class="container">
-    <h1>About Us</h1>
-    <p>We are a company committed to delivering excellence in everything we do. With years of experience, we have become
-      a trusted name in our industry.</p>
-    <section>
-      <h2>Our History</h2>
-      <p>Founded in 2010, we have been on a journey of growth and innovation. From humble beginnings, we have reached
-        global heights, serving millions of customers worldwide.</p>
-    </section>
-    <section>
-      <h2>Our Values</h2>
-      <ul>
-        <li>Customer Focus</li>
-        <li>Innovation</li>
-        <li>Integrity</li>
-        <li>Teamwork</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Meet Our Team</h2>
-      <p>We are proud to have a team of dedicated professionals who work tirelessly to achieve our goals. Their
-        expertise is the backbone of our success.</p>
-    </section>
-  </div>
-  <footer>
-    <p>© 2024 Your Website</p>
-  </footer>
+<body data-nav-active="home">
+  <div id="site-header"></div>
+  <main class="site-main">
+    <article class="static-page wrap">
+      <h1>About Nordstrand</h1>
+      <p><strong>Nordstrand Retail GmbH</strong> is a European online retailer focused on <strong>tangible
+          products</strong> — electronics, fashion, home goods, and sports equipment. We source inventory, hold stock
+        or dropship from verified suppliers, and deliver sealed retail packaging to customers.</p>
+      <h2>What we sell</h2>
+      <p>Only <strong>physical items</strong> you can unbox. We do not sell consulting, SaaS subscriptions, or
+        intangible services through this shop.</p>
+      <h2>Technology</h2>
+      <p>We use <strong>CleverPush</strong> for optional <strong>customer engagement</strong> (e.g. back-in-stock and
+        delivery notifications). CleverPush does not fulfil orders; all sales contracts and shipping obligations are
+        with <strong>Nordstrand Retail GmbH</strong>.</p>
+      <h2>Quality</h2>
+      <p>Two-year warranty on qualifying electronics (per manufacturer), 30-day returns on most unopened items. See <a
+          href="returns.html">returns policy</a>.</p>
+      <p><a href="catalog.html">Shop now</a></p>
+    </article>
+  </main>
+  <div id="site-footer"></div>
+  <script src="layout.js"></script>
+  <script>ShopLayout.inject('home');</script>
 </body>
 
 </html>

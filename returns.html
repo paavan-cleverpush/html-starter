@@ -4,33 +4,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Returns & refunds</title>
+  <title>Returns &amp; refunds — Nordstrand</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-  <header>
-    <h1 class="title">Demo Store</h1>
-  </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="products/index.html">Shop</a>
-    <a href="shipping.html">Shipping</a>
-    <a href="returns.html">Returns</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <div class="container policy-page">
-    <h1>Returns &amp; refunds</h1>
-    <p>You may return <strong>unused physical items</strong> in original packaging within 30 days of delivery for a
-      refund or exchange. This is demo copy — replace with your legal policy.</p>
-    <h2>How to return</h2>
-    <p>Contact us with your order number. We will provide a return label or instructions.</p>
-    <h2>Refunds</h2>
-    <p>Refunds are issued to the original payment method within 14 days after we receive the return.</p>
-  </div>
-  <footer>
-    <p>© 2024 Demo Store</p>
-  </footer>
+<body data-nav-active="home">
+  <div id="site-header"></div>
+  <main class="site-main">
+    <article class="static-page wrap">
+      <h1>Returns &amp; refunds</h1>
+      <p>For <strong>unused physical products</strong> in original packaging, you may withdraw within <strong>30
+          days</strong> of delivery (EU consumer rights).</p>
+      <h2>How to return</h2>
+      <ol>
+        <li>Log in to your account or use the link in your order email.</li>
+        <li>Print the prepaid return label (Germany) or request RMA for other countries.</li>
+        <li>Drop off at the carrier or schedule pickup for large items.</li>
+      </ol>
+      <h2>Refunds</h2>
+      <p>After we receive and inspect the return, we refund the <strong>product price</strong> to your original payment
+        method within 14 days. Shipping charges are non-refundable unless the item was defective or incorrect.</p>
+      <h2>Excluded</h2>
+      <p>Opened hygiene products, personalised items, and digital codes (we do not sell digital-only goods on this
+        store).</p>
+      <p><a href="contact.html">Contact support</a></p>
+    </article>
+  </main>
+  <div id="site-footer"></div>
+  <script src="layout.js"></script>
+  <script>ShopLayout.inject('home');</script>
 </body>
 
 </html>

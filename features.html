@@ -4,39 +4,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Features</title>
+  <title>Notifications &amp; engagement — Nordstrand</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-  <header>
-    <h1 class='title'>Features</h1>
-  </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="features.html">Features</a>
-  </nav>
-  <div class="container">
-    <h1>Features Page</h1>
-    <p>Discover what makes us unique. Here are the standout features of our platform:</p>
-    <section>
-      <h2>Feature 1: User-Friendly Design</h2>
-      <p>Our platform is designed with ease of use in mind, ensuring a seamless user experience.</p>
-    </section>
-    <section>
-      <h2>Feature 2: Advanced Technology</h2>
-      <p>We leverage the latest technology to deliver cutting-edge solutions to our users.</p>
-    </section>
-    <section>
-      <h2>Feature 3: Reliable Support</h2>
-      <p>Our support team is available 24/7 to assist you with any issues or questions.</p>
-    </section>
-  </div>
-  <footer>
-    <p>© 2024 Your Website</p>
-  </footer>
+<body data-nav-active="home">
+  <div id="site-header"></div>
+  <main class="site-main">
+    <article class="static-page wrap">
+      <h1>How we keep you informed</h1>
+      <p><strong>Nordstrand Retail GmbH</strong> sells <strong>physical products</strong> through this website. For
+        optional updates (order status, back-in-stock, offers), we use <strong>CleverPush</strong> — a customer
+        messaging layer.</p>
+      <h2>What CleverPush is (and is not)</h2>
+      <ul>
+        <li><strong>Is:</strong> web push, email capture, and similar <strong>notification</strong> tools.</li>
+        <li><strong>Is not:</strong> the seller of record, payment processor, or warehouse — all product sales remain
+          with Nordstrand Retail GmbH.</li>
+      </ul>
+      <h2>Your choices</h2>
+      <p>You can browse and buy without enabling notifications. Marketing messages require your consent where required
+        by law (e.g. GDPR).</p>
+      <p><a href="catalog.html">Back to shop</a></p>
+    </article>
+  </main>
+  <div id="site-footer"></div>
+  <script src="layout.js"></script>
+  <script>ShopLayout.inject('home');</script>
 </body>
 
 </html>

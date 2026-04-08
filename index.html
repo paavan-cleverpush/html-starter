@@ -4,67 +4,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>Nordstrand — Electronics, Fashion, Home &amp; more</title>
+  <meta name="description"
+    content="Nordstrand Retail GmbH — online store for tangible physical products: electronics, fashion, home &amp; kitchen, sports. Fast EU shipping.">
   <link rel="stylesheet" href="styles.css">
   <link rel="manifest" href="manifest.json">
-  <meta name="p:domain_verify" content="1f7370b65904f5308f4469454e3021a6"/>
+  <meta name="p:domain_verify" content="1f7370b65904f5308f4469454e3021a6" />
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js').then(() => {
-        console.log('Service Worker registered successfully.');
-      }).catch((error) => {
-        console.error('Service Worker registration failed:', error);
-      });
+      navigator.serviceWorker.register('service-worker.js').then(function () { }).catch(function () { });
     }
   </script>
 </head>
 
-<body>
-  <header>
-    <h1 class='title'>CleverPush</h1>
-  </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="products/index.html">Shop</a>
-    <a href="shipping.html">Shipping</a>
-    <a href="returns.html">Returns</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="features.html">Features</a>
-  </nav>
-  <div class="container">
-    <h1>Home</h1>
-    <p><strong>Demo Store</strong> sells <strong>physical products</strong> (clothing, homeware) that we ship to your
-      address. <a href="products/index.html">Browse the shop</a> for items with visible prices and add-to-cart.</p>
-    <section>
-      <h2>Latest News</h2>
-      <p>Stay updated with the latest news from our industry. We regularly update this section with the most relevant
-        and recent developments.</p>
-    </section>
-    <section>
-      <h2>Our mission</h2>
-      <p>We focus on quality physical goods, reliable delivery, and clear return options — see <a
-          href="shipping.html">shipping</a> and <a href="returns.html">returns</a>.</p>
-      <script src="https://static.cleverpush.com/sdk/cleverpush-chat.js"></script>
+<body data-nav-active="home">
+  <div id="site-header"></div>
 
+  <main class="site-main">
+    <section class="hero-banner">
+      <h1>Physical products, delivered to your door</h1>
+      <p>Nordstrand sells only <strong>tangible goods</strong> — electronics, apparel, home products &amp; more. Real
+        prices, real checkout, EU shipping.</p>
     </section>
-    <script src="https://static.clpsh.com/sdk/cleverpush-story.js" async></script>
-    <div class="cleverpush-story-widget" data-id="BGQeoQaa3B2KAR8bC"></div>
-    <section>
-      <h2>Shop</h2>
-      <p><a class="btn-buy" href="products/index.html">Go to product catalog</a></p>
-    </section>
-  </div>
-  <footer>
-    <p>© 2024 Demo Store — <a href="shipping.html">Shipping</a> · <a href="returns.html">Returns</a> · <a
-        href="contact.html">Contact</a></p>
-  </footer>
 
-  <script>window.cleverpushEmailConfig = { channelId: 'Gh3RtTqArcJZJsmPB' };</script>
-  <script src="https://static.clpsh.com/sdk/cleverpush-email.js" async></script>
+    <h2 class="section-title">Today's deals</h2>
+    <div class="deals-scroll" id="deals-strip"></div>
 
-  <div class="cleverpush-email-form" data-id="2Afkt3Zj8TJ5pxBbB"></div>
-  <!-- <div class="cleverpush-chat-target"></div> -->
+    <h2 class="section-title">Best sellers in your region</h2>
+    <div class="product-grid" id="product-grid-home"></div>
+
+    <div class="cp-section">
+      <div class="container">
+        <h2>Stay updated</h2>
+        <p>Subscribe for order updates and offers (CleverPush-powered notifications on this demo).</p>
+        <script src="https://static.cleverpush.com/sdk/cleverpush-chat.js"></script>
+        <script src="https://static.clpsh.com/sdk/cleverpush-story.js" async></script>
+        <div class="cleverpush-story-widget" data-id="BGQeoQaa3B2KAR8bC"></div>
+        <script>window.cleverpushEmailConfig = { channelId: 'Gh3RtTqArcJZJsmPB' };</script>
+        <script src="https://static.clpsh.com/sdk/cleverpush-email.js" async></script>
+        <div class="cleverpush-email-form" data-id="2Afkt3Zj8TJ5pxBbB"></div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="layout.js"></script>
+  <script>ShopLayout.inject('home');</script>
+  <script src="shop.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      NordstrandShop.initDeals();
+      NordstrandShop.initHome();
+    });
+  </script>
   <script src="https://static.cleverpush.com/sdk/cleverpush.js"></script>
   <script src="https://static.cleverpush.com/channel/loader/mej3qrfkS5mNXysgr.js" async></script>
   <script>
@@ -74,7 +67,7 @@
       loadIframe: false,
       autoRegister: true,
       showNotificationBell: true,
-    });  
+    });
   </script>
 </body>
 
