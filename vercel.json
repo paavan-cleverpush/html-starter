@@ -1,3 +1,6 @@
 {
-  "buildCommand": "npm run inject"
+  "buildCommand": "npm run inject",
+  "outputDirectory": "./",
+  "installCommand": "npm install",
+  "framework": null
 }
